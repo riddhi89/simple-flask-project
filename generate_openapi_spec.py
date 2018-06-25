@@ -32,8 +32,7 @@ for r in app.url_map.iter_rules():
             val = resp.get(status)
             content = resp.get(status).get('schema')
             if content:
-                # Make sure that the mapping is present in
-                # global_schema_map
+                # Check if mapping is present in global schema map
                 if GLOBAL_SCHEMA_MAP.get(content):
                     val.update({
                         'content': {
@@ -45,7 +44,6 @@ for r in app.url_map.iter_rules():
                 else:
                     print("Mapping missing for the schema = ", content)
 
-                # Pop the schema parameter since it is not openapi v3 compatible
                 val.pop('schema')
 
     spec.add_path(path=path, operations=operations)
