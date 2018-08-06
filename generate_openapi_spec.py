@@ -48,8 +48,8 @@ for r in app.url_map.iter_rules():
 
     spec.add_path(path=path, operations=operations)
 
-    if not os.path.exists('api_docs/'):
-        os.makedirs('api_docs')
+if not os.path.exists('api_docs/'):
+    os.makedirs('api_docs')
 
-    with open('api_docs/openapi.json', 'w') as openapi_json_file:
-        json.dump(spec.to_dict(), openapi_json_file, indent=4, sort_keys=True)
+with open('api_docs/openapi.json', 'w') as openapi_json_file:
+    json.dump(spec.to_dict(), openapi_json_file, indent=4, sort_keys=True)
