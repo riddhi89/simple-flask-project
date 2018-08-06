@@ -1,6 +1,6 @@
 # simple-flask-project
 
-Setup: create a pyhton virtual environment and install the requirements:
+Setup: create a python virtual environment and install the requirements:
 
 	virtualenv --python=python3.6 .venv
 	source .venv/bin/activate
