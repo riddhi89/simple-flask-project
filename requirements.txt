@@ -1,2 +1,2 @@
 Flask
-apispec
+apispec==0.38.0
